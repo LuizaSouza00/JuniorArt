@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+<title>Aluno</title>
+<!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+</head>
+<body>
+
+  
+ <div>
+<nav class="nav-extended">
+    <div class="nav-wrapper #00b0ff light-blue accent-3">
+      <a href="/dex" class="brand-logo">JuniorArt</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/"><i class="material-icons left">home</i>Inicio</a></li>
+        <li><a href="/pedidos"><i class="material-icons left">storage</i>Pedidos</a></li>
+			<li><a href="/logout"><i class="material-icons left">close</i>sair</a></li>       
+      </ul>
+    </div>
+	</nav>
+	</div>
+
+	<h1>Cadastro Pedidos</h1>
+	
+	<form class="container" method="post" >
+			
+	Nome: <input type="text" value="" name="nome"> <br>
+	<div class="row">
+	<div class="input-field col s6">
+	Data Entrega: <input type="text" value="" name="dataEntrega"> <br>
+	</div>
+	<div class="input-field col s3">
+	Endereço:<input type="text" value="" name="endereco"> <br>
+	</div>
+	<div class="input-field col s6">
+	Descrição: <input type="text" value="" name="descricao"> <br>
+	</div>
+	<div class="input-field col s3">
+	Medidas: <input type="text" value="" name="medidas"> <br>
+	</div>
+	<div class="input-field col s3">
+	Formato: <input type="text" value="" name="formato"> <br>
+	</div>
+	</div>
+	
+	<p>
+	<button class="waves-effect waves-light btn #00b0ff light-blue accent-3" type="submit">Cadastrar</button> 
+	</p>
+
+</form>	
+<!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+      
+ 
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+<title>Listagem</title>
+<!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   
+</head>
+<body>
+
+<div >
+<nav class="nav-extended">
+    <div class="nav-wrapper #00b0ff light-blue accent-3">
+      <a href="/dex" class="brand-logo">JuniorArt</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/"><i class="material-icons left">home</i>inicio</a></li>
+        <li><a href="/formP"><i class="material-icons left">add_box</i>Cadastrar Pedido</a></li>
+     		<li><a href="/logout"><i class="material-icons left">close</i>sair</a></li>
+     </ul>
+    </div>
+	</nav>
+	</div>
+		
+	<table class="container highlight">
+		<thead>
+			<tr>
+				<th>Nome</th>
+				<th>Data de Entrega</th>
+				<th>Endereço</th>
+				<th>Descrição</th>
+				<th>Medidas</th>
+				<th>Formato</th>
+				<th>Finalizar</th>
+			</tr>
+		</thead>
+	<tbody>
+	<tr th:each="pedidos : ${pedidos}">
+		<td><span th:text="${pedidos.nome}"></span></td>
+		<td><span th:text="${pedidos.dataEntrega}"></span></td>
+		<td><span th:text="${pedidos.endereco}"></span></td>
+		<td><span th:text="${pedidos.descricao}"></span></td>
+		<td><span th:text="${pedidos.medidas}"></span></td>
+		<td><span th:text="${pedidos.formato}"></span></td>
+		<td><a class="waves-effect waves-light btn-small #00b0ff light-blue accent-3" th:href="${(#mvc.url('PC#deletePedido').arg(0, pedidos.nome)).build()}"><i class="material-icons center">check_box</i></a></td>
+		
+	</tr>
+	</tbody>
+	</table>
+
+	<!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+      
+     
+</body>
+</html>

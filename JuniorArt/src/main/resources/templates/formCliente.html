@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+<title>Aluno</title>
+<!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+</head>
+<body>
+
+  
+ <div>
+<nav class="nav-extended">
+    <div class="nav-wrapper #00b0ff light-blue accent-3">
+      <a href="/dex" class="brand-logo">JuniorArt</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/"><i class="material-icons left">home</i>Inicio</a></li>
+        
+      </ul>
+    </div>
+	</nav>
+	</div>
+
+	<h1>Cadastro Cliente</h1>
+	
+	<form class="container" method="post" >
+			
+	Nome: <input type="text" value="" name="nome"> <br>
+	<div class="row">
+	<div class="input-field col s6">
+	CPF: <input type="text" value="" name="cpf"> <br>
+	</div>
+	<div class="input-field col s3">
+	Número:<input type="text" value="" name="numero"> <br>
+	</div>
+	<div class="input-field col s6">
+	E-mail: <input type="text" value="" name="email"> <br>
+	</div>
+	<div class="input-field col s3">
+	Login: <input type="text" value="" name="login"> <br>
+	</div>
+	<div class="input-field col s3">
+	Senha: <input type="text" value="" name="senha"> <br>
+	</div>
+	</div>
+	
+	<p>
+	<button class="waves-effect waves-light btn #00b0ff light-blue accent-3" type="submit">Cadastrar</button> 
+	</p>
+
+</form>	
+<!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+      
+ 
+
+</body>
+</html>
